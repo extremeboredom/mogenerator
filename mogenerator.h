@@ -56,6 +56,7 @@
 	BOOL					_version;
 	BOOL					_listSourceFiles;
     BOOL					_orphaned;
+    BOOL                    _arc;
 }
 
 - (NSString*)appSupportFileNamed:(NSString*)fileName_;

@@ -343,6 +343,7 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
 
     {@"help",				'h',    DDGetoptNoArgument},
     {@"version",			0,      DDGetoptNoArgument},
+	{@"arc",				0,		DDGetoptNoArgument},
     {nil,					0,      0},
     };
     [optionsParser addOptionsFromTable: optionTable];
