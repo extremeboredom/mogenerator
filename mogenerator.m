@@ -364,6 +364,7 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
            "      --includeh FILE           Generate aggregate include file for .h files for human generated source files only\n"
            "      --template-path PATH      Path to templates (absolute or relative to model path)\n"
            "      --template-group NAME     Name of template group\n"
+		   "      --arc                     Enable the use of ARC property qualifiers (strong instead of retain)\n"
            "  -O, --output-dir DIR          Output directory\n"
            "  -M, --machine-dir DIR         Output directory for machine files\n"
            "  -H, --human-dir DIR           Output directory for human files\n"
