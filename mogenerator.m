@@ -9,6 +9,7 @@
 #import "RegexKitLite.h"
 
 NSString	*gCustomBaseClass;
+BOOL		gUseARCQualifiers;
 
 @interface NSEntityDescription (fetchedPropertiesAdditions)
 - (NSDictionary *)fetchedPropertiesByName;
@@ -107,6 +108,10 @@ NSString	*gCustomBaseClass;
 	} else {
 		return [[[self fetchedPropertiesByName] allValues]  sortedArrayUsingDescriptors:sortDescriptors];
 	}
+}
+
+- (BOOL)useARCQualifiers {
+	return gUseARCQualifiers;
 }
 
 #pragma mark Fetch Request support
@@ -497,6 +502,7 @@ NSString *ApplicationSupportSubdirectoryName = @"mogenerator";
         return EXIT_SUCCESS;
     }
 	
+	gUseARCQualifiers = _arc;
     gCustomBaseClass = [baseClass retain];
     NSString * mfilePath = includem;
 	NSString * hfilePath = includeh;
